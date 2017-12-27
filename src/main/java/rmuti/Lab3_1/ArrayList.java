@@ -1,4 +1,4 @@
-package rmuti.Lab3;
+package rmuti.Lab3_1;
 
 import java.util.Arrays;
 
@@ -31,44 +31,4 @@ public class ArrayList {
 		return Arrays.toString(elementData);
 	}
 
-	public void remove(int i) {
-		for (int j = i; j < size - 1; j++) {
-			elementData[j] = elementData[j + 1];
-		}
-		elementData[size - 1] = null;
-		size--;
-	}
-	public Object get(int index) {
-		return elementData[index];
-	}
-	public boolean contains(Object o) {
-		if(indexOf(o) >= 0) {
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	public int indexOf(Object o) {
-		for(int i = 0; i< size; i++) {
-			if(o.equals(elementData[i])) {
-				return i;
-			}
-		}
-		return -1;
-	}
-	
-	public void addFirst(Object e) {
-		add(0, e);
-	}
-
-	
-	public void add(Object e) {
-		add(size, e);
-	}
-	
-	public int size() {
-		return size;
-		
-	}
 }
